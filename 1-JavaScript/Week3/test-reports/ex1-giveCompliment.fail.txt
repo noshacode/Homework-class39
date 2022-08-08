@@ -1,0 +1,5 @@
+
+*** Spell Checker Report ***
+
+ex1-giveCompliment.js:28:19 - Unknown word (Nuha)
+ex1-giveCompliment.js:34:21 - Unknown word (Nuha)
