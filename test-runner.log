@@ -1,0 +1,827 @@
+2022-08-09 07:46:36 info: ------------------------------------------------------
+2022-08-09 07:46:36 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-08-09 07:46:36 info: ------------------------------------------------------
+2022-08-09 07:46:38 error: *** Unit Test Error Report ***
+
+console.log
+    [ 2, 4 ]
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:15:11)
+
+
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  ✕ doubleEvenNumbers should take the even numbers and double them (19 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      29 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      30 |   const expected = [4, 8];
+    > 31 |   expect(actual).toEqual(expected);
+         |                  ^
+      32 | });
+      33 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:31:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.466 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-08-09 07:46:39 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  16:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-08-09 07:49:59 info: ------------------------------------------------------
+2022-08-09 07:49:59 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-08-09 07:49:59 info: ------------------------------------------------------
+2022-08-09 07:50:01 info: All unit tests passed.
+2022-08-09 07:50:03 info: All steps were completed successfully
+2022-08-09 08:20:14 info: -------------------------------------------------
+2022-08-09 08:20:14 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:20:14 info: -------------------------------------------------
+2022-08-09 08:20:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (2 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: [30, 120, 240, 60]
+
+      48 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      49 |     const expected = '€187.50';
+    > 50 |     expect(result).toBe(expected);
+         |                    ^
+      51 |   });
+      52 | });
+      53 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:50:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.465 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:20:17 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:26  error    'tasks' is defined but never used      no-unused-vars
+  34:32  warning  Identifier 'Rate' is not in camelCase  hyf/camelcase
+  34:32  error    'Rate' is defined but never used       no-unused-vars
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2022-08-09 08:20:53 info: -------------------------------------------------
+2022-08-09 08:20:53 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:20:53 info: -------------------------------------------------
+2022-08-09 08:20:54 error: *** Unit Test Error Report ***
+
+console.log
+    [ 30, 120, 240, 60 ]
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:36:10)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (16 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: [30, 120, 240, 60]
+
+      49 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      50 |     const expected = '€187.50';
+    > 51 |     expect(result).toBe(expected);
+         |                    ^
+      52 |   });
+      53 | });
+      54 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:51:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.291 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:20:55 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:26  error    'tasks' is defined but never used      no-unused-vars
+  34:32  warning  Identifier 'Rate' is not in camelCase  hyf/camelcase
+  34:32  error    'Rate' is defined but never used       no-unused-vars
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2022-08-09 08:26:26 info: -------------------------------------------------
+2022-08-09 08:26:26 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:26:26 info: -------------------------------------------------
+2022-08-09 08:26:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (1 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    ReferenceError: duration is not defined
+
+      33 |
+      34 | function computeEarnings(tasks,Rate) {
+    > 35 |  const durationTime = mondayTasks[duration].map(num=>num*2*25 )
+         |                                   ^
+      36 |
+      37 |  return  `€ ${durationTime}`;
+      38 |  console.log(durationTime)
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:35)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:50:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.274 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:26:28 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:26  error    'tasks' is defined but never used      no-unused-vars
+  34:32  warning  Identifier 'Rate' is not in camelCase  hyf/camelcase
+  34:32  error    'Rate' is defined but never used       no-unused-vars
+  35:35  error    'duration' is not defined              no-undef
+  38:2   error    Unreachable code                       no-unreachable
+
+✖ 5 problems (4 errors, 1 warning)
+
+
+2022-08-09 08:28:09 info: -------------------------------------------------
+2022-08-09 08:28:09 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:28:09 info: -------------------------------------------------
+2022-08-09 08:28:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    ReferenceError: duration is not defined
+
+      33 |
+      34 | function computeEarnings(tasks,rate) {
+    > 35 |  const durationTime = mondayTasks[duration].map(num=>tasks*2*rate )
+         |                                   ^
+      36 |
+      37 |  return `€ ${durationTime}`;
+      38 |
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:35)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:50:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.273 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:28:10 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  35:35  error  'duration' is not defined        no-undef
+  35:49  error  'num' is defined but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2022-08-09 08:28:30 info: -------------------------------------------------
+2022-08-09 08:28:30 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:28:30 info: -------------------------------------------------
+2022-08-09 08:28:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (1 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    ReferenceError: duration is not defined
+
+      33 |
+      34 | function computeEarnings(tasks,rate) {
+    > 35 |  const durationTime = mondayTasks[duration].map(tasks=>tasks*2*rate )
+         |                                   ^
+      36 |
+      37 |  return `€ ${durationTime}`;
+      38 |
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:35)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:50:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.273 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:28:32 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  35:35  error  'duration' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 08:28:47 info: -------------------------------------------------
+2022-08-09 08:28:47 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:28:47 info: -------------------------------------------------
+2022-08-09 08:28:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (4 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ NaN,NaN,NaN,NaN"
+
+      50 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      51 |     const expected = '€187.50';
+    > 52 |     expect(result).toBe(expected);
+         |                    ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:52:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.464 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:49:40 info: -------------------------------------------------
+2022-08-09 08:49:41 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:49:41 info: -------------------------------------------------
+2022-08-09 08:49:43 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (4 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ 0[object Object],0[object Object][object Object],0[object Object][object Object][object Object],0[object Object][object Object][object Object][object Object]"
+
+      55 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      56 |     const expected = '€187.50';
+    > 57 |     expect(result).toBe(expected);
+         |                    ^
+      58 |   });
+      59 | });
+      60 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:57:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.468 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:49:44 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:32  error  'rate' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 08:50:28 info: -------------------------------------------------
+2022-08-09 08:50:28 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:50:28 info: -------------------------------------------------
+2022-08-09 08:50:30 error: *** Unit Test Error Report ***
+
+console.log
+    0[object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+  console.log
+    0[object Object][object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+  console.log
+    0[object Object][object Object][object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+  console.log
+    0[object Object][object Object][object Object][object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (18 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ ,,,"
+
+      55 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      56 |     const expected = '€187.50';
+    > 57 |     expect(result).toBe(expected);
+         |                    ^
+      58 |   });
+      59 | });
+      60 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:57:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.288 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:50:30 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:32  error  'rate' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 08:50:56 info: -------------------------------------------------
+2022-08-09 08:50:56 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:50:56 info: -------------------------------------------------
+2022-08-09 08:50:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
+      at node_modules/@jest/core/build/TestScheduler.js:316:17
+      at node_modules/emittery/index.js:260:13
+          at Array.map (<anonymous>)
+      at Emittery.emit (node_modules/emittery/index.js:258:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.266 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:50:58 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  13:7   error    'mondayTasks' is assigned a value but never used  no-unused-vars
+  32:7   error    'hourlyRate' is assigned a value but never used   no-unused-vars
+  34:10  error    'computeEarnings' is defined but never used       no-unused-vars
+  34:32  error    'rate' is defined but never used                  no-unused-vars
+  47:1   warning  Remove commented-out code                         hyf/no-commented-out-code
+  54:1   warning  Remove commented-out code                         hyf/no-commented-out-code
+
+✖ 6 problems (4 errors, 2 warnings)
+
+
+2022-08-09 08:51:15 info: -------------------------------------------------
+2022-08-09 08:51:15 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:51:15 info: -------------------------------------------------
+2022-08-09 08:51:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
+      at node_modules/@jest/core/build/TestScheduler.js:316:17
+      at node_modules/emittery/index.js:260:13
+          at Array.map (<anonymous>)
+      at Emittery.emit (node_modules/emittery/index.js:258:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.209 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:51:16 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  13:7   error    'mondayTasks' is assigned a value but never used  no-unused-vars
+  32:7   error    'hourlyRate' is assigned a value but never used   no-unused-vars
+  34:10  error    'computeEarnings' is defined but never used       no-unused-vars
+  34:32  error    'rate' is defined but never used                  no-unused-vars
+  47:1   warning  Remove commented-out code                         hyf/no-commented-out-code
+  54:1   warning  Remove commented-out code                         hyf/no-commented-out-code
+
+✖ 6 problems (4 errors, 2 warnings)
+
+
+2022-08-09 08:52:49 info: -------------------------------------------------
+2022-08-09 08:52:49 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:52:49 info: -------------------------------------------------
+2022-08-09 08:52:50 error: *** Unit Test Error Report ***
+
+console.log
+    0[object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+  console.log
+    0[object Object][object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+  console.log
+    0[object Object][object Object][object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+  console.log
+    0[object Object][object Object][object Object][object Object]
+
+      at map (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:38:12)
+          at Array.map (<anonymous>)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (17 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ ,,,"
+
+      55 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      56 |     const expected = '€187.50';
+    > 57 |     expect(result).toBe(expected);
+         |                    ^
+      58 |   });
+      59 | });
+      60 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:57:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.293 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:52:51 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:32  error  'rate' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 08:53:44 info: -------------------------------------------------
+2022-08-09 08:53:44 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:53:44 info: -------------------------------------------------
+2022-08-09 08:53:46 error: *** Unit Test Error Report ***
+
+console.log
+    0[object Object][object Object][object Object][object Object]
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:40:10)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (14 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ ,,,"
+
+      56 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      57 |     const expected = '€187.50';
+    > 58 |     expect(result).toBe(expected);
+         |                    ^
+      59 |   });
+      60 | });
+      61 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.287 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:53:46 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:32  error  'rate' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 08:54:48 info: -------------------------------------------------
+2022-08-09 08:54:48 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 08:54:48 info: -------------------------------------------------
+2022-08-09 08:54:49 error: *** Unit Test Error Report ***
+
+console.log
+    450
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:40:10)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (16 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ ,,,"
+
+      56 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      57 |     const expected = '€187.50';
+    > 58 |     expect(result).toBe(expected);
+         |                    ^
+      59 |   });
+      60 | });
+      61 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.289 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 08:54:50 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  34:32  error  'rate' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 09:00:34 info: -------------------------------------------------
+2022-08-09 09:00:34 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 09:00:34 info: -------------------------------------------------
+2022-08-09 09:00:35 error: *** Unit Test Error Report ***
+
+console.log
+    187.5
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:40:10)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (15 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ ,,,"
+
+      56 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      57 |     const expected = '€187.50';
+    > 58 |     expect(result).toBe(expected);
+         |                    ^
+      59 |   });
+      60 | });
+      61 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.297 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 09:00:36 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:39:8 - Unknown word (qsma)
+ex2-mondaysWorth.test.js:40:14 - Unknown word (qsma)
+
+2022-08-09 09:03:24 info: -------------------------------------------------
+2022-08-09 09:03:24 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 09:03:24 info: -------------------------------------------------
+2022-08-09 09:03:25 error: *** Unit Test Error Report ***
+
+console.log
+    187.5
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:40:10)
+
+  console.log
+    € 187.5
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:46:9)
+
+  console.log
+    187.5
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:40:10)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (3 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€ 187.5"
+
+      57 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      58 |     const expected = '€187.50';
+    > 59 |     expect(result).toBe(expected);
+         |                    ^
+      60 |   });
+      61 | });
+      62 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:59:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.464 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-09 09:03:26 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  36:8  error  'durationTime' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 09:03:27 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:39:8 - Unknown word (qsma)
+ex2-mondaysWorth.test.js:40:14 - Unknown word (qsma)
+ex2-mondaysWorth.test.js:43:14 - Unknown word (qsma)
+
+2022-08-09 09:09:22 info: -------------------------------------------------
+2022-08-09 09:09:22 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 09:09:22 info: -------------------------------------------------
+2022-08-09 09:09:25 info: All unit tests passed.
+2022-08-09 09:09:26 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  36:8  error  'durationTime' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-08-09 09:09:27 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:39:8 - Unknown word (qsma)
+ex2-mondaysWorth.test.js:40:14 - Unknown word (qsma)
+ex2-mondaysWorth.test.js:42:20 - Unknown word (qsma)
+
+2022-08-09 09:10:22 info: -------------------------------------------------
+2022-08-09 09:10:22 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-09 09:10:22 info: -------------------------------------------------
+2022-08-09 09:10:23 info: All unit tests passed.
+2022-08-09 09:10:24 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  36:8  warning  Results from `map` are unused. Replace `map` with `forEach`  no-restricted-syntax
+  36:8  error    Results from `map` are unused. Replace `map` with `forEach`  hyf/use-map-result
+
+✖ 2 problems (1 error, 1 warning)
+
+
