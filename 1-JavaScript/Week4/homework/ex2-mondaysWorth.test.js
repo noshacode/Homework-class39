@@ -31,23 +31,22 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(tasks,rate) {
- let totalDuration = 0;
- tasks.map(function(task){
-  totalDuration =totalDuration+task.duration
- });
- const sum = (totalDuration/60)*rate
- console.log(sum);
+function computeEarnings(tasks, rate) {
+  let totalDuration = 0;
+  tasks.forEach(function (task) {
+    totalDuration = totalDuration + task.duration;
+  });
+  const sum = (totalDuration / 60) * rate;
+  console.log(sum);
 
- const formatted = sum.toLocaleString('en-US', {
-  style: 'currency',
-  currency: 'EUR',
-});
+  const formatted = sum.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'EUR',
+  });
 
- return formatted;
-
+  return formatted;
 }
-console.log(computeEarnings(mondayTasks ,hourlyRate))
+console.log(computeEarnings(mondayTasks, hourlyRate));
 
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {
