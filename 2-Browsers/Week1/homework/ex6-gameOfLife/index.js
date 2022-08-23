@@ -81,6 +81,14 @@ function createGame(context, numRows, numColumns) {
         CELL_SIZE - 2,
         CELL_SIZE - 2
       );
+      // } else {
+      //   context.fillStyle = `rgba(189, 49, 122, 0.8)`;
+      //   context.fillRect(
+      //     cell.x * CELL_SIZE + 1,
+      //     cell.y * CELL_SIZE + 1,
+      //     CELL_SIZE - 2,
+      //     CELL_SIZE - 2
+      //   );
     }
   }
 

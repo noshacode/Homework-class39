@@ -1,0 +1,9 @@
+
+*** ESLint Report ***
+
+ex4-whatsTheTime/index.js
+  16:9  warning  'today' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  17:5  warning  Remove commented-out code                         hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+

@@ -1,1 +1,21 @@
 /* Write your style here */
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+li {
+  width: calc(25% - 51px);
+  margin: 15px;
+  padding: 10px;
+  min-width: 350px;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
