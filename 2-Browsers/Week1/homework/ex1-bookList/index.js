@@ -27,7 +27,8 @@ function createBookList(books) {
     authorP.textContent = book.author;
 
     const img = document.createElement('img');
-    img.src = `./assets/${book.img}`;
+    const bookImg = book.title.split(' ').join('_').toLowerCase();
+    img.src = `./assets/${bookImg}.jpg`;
     img.alt = book.title;
 
     const li = document.createElement('li');
@@ -49,14 +50,14 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
-      img: 'the_design_of_everyday_things.jpg',
+      // img: 'the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
-      img: 'the_most_human_human.jpg',
+      // img: 'the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
