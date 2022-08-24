@@ -12,7 +12,7 @@ function addCurrentTime() {
   const currentTime = document.createElement('div');
   document.body.appendChild(currentTime);
 
-  setInterval(() => {
+  setInterval(function () {
     const today = new Date();
     // let hours = today.getHours();
     // let minutes = today.getMinutes();
@@ -22,6 +22,14 @@ function addCurrentTime() {
     const time = today.toLocaleTimeString();
     currentTime.textContent = time;
   }, 1000);
+
+  // setInterval(getTime, 1000);
+
+  // function getTime() {
+  //   const today = new Date();
+  //   const time = today.toLocaleTimeString();
+  //   currentTime.textContent = time;
+  // }
 }
 
 window.addEventListener('load', addCurrentTime);
