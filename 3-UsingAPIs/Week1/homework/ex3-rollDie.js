@@ -48,7 +48,7 @@ function rollDie() {
 function main() {
   rollDie()
     .then((value) => console.log(value))
-    .catch((rejected) => console.log(rejected.message));
+    .catch((err) => console.log(err.message));
 }
 
 // ! Do not change or remove the code below
