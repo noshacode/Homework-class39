@@ -8,8 +8,11 @@ const fetch = require('node-fetch');
 
 async function getData(url) {
   const response = await fetch(url);
-  const data = await response.json();
-  return data;
+  if (response.ok) {
+    const parsedData = await response.json();
+    return parsedData;
+  }
+  throw new Error('HTTP Error');
 }
 
 function renderLaureate({ knownName, birth, death }) {

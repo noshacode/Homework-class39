@@ -1628,3 +1628,13 @@ Ran all test suites matching /ex4-diceRace.test.js/i.
 2022-10-05 12:05:24 info: ----------------------------------------
 2022-10-05 12:05:25 info: All unit tests passed.
 2022-10-05 12:05:27 info: All steps were completed successfully
+2022-10-05 12:12:39 info: --------------------------------------------
+2022-10-05 12:12:39 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2022-10-05 12:12:39 info: --------------------------------------------
+2022-10-05 12:12:39 warn: A unit test file was not provided.
+2022-10-05 12:12:41 info: All steps were completed successfully
+2022-10-05 12:12:49 info: ----------------------------------------
+2022-10-05 12:12:49 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-10-05 12:12:49 info: ----------------------------------------
+2022-10-05 12:12:49 warn: A unit test file was not provided.
+2022-10-05 12:12:50 info: All steps were completed successfully
