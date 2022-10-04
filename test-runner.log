@@ -1524,3 +1524,107 @@ Ran all test suites matching /ex3-rollAnAce.test.js/i.
 2022-09-20 11:24:47 info: --------------------------------------------
 2022-09-20 11:24:47 warn: A unit test file was not provided.
 2022-09-20 11:24:49 info: All steps were completed successfully
+2022-10-05 12:03:27 info: --------------------------------------------
+2022-10-05 12:03:27 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2022-10-05 12:03:27 info: --------------------------------------------
+2022-10-05 12:03:27 warn: A unit test file was not provided.
+2022-10-05 12:03:30 info: All steps were completed successfully
+2022-10-05 12:03:40 info: ------------------------------------------
+2022-10-05 12:03:40 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-10-05 12:03:40 info: ------------------------------------------
+2022-10-05 12:03:44 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (84 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:2  error  <button> is missing required \"type\" attribute  element-required-attributes·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.929 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-10-05 12:04:15 info: ------------------------------------------
+2022-10-05 12:04:15 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-10-05 12:04:15 info: ------------------------------------------
+2022-10-05 12:04:20 info: All unit tests passed.
+2022-10-05 12:04:22 info: All steps were completed successfully
+2022-10-05 12:04:40 info: ---------------------------------------------
+2022-10-05 12:04:40 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-10-05 12:04:40 info: ---------------------------------------------
+2022-10-05 12:04:43 info: All unit tests passed.
+2022-10-05 12:04:45 info: All steps were completed successfully
+2022-10-05 12:04:59 info: ----------------------------------------
+2022-10-05 12:04:59 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-10-05 12:04:59 info: ----------------------------------------
+2022-10-05 12:05:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-diceRace.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex4-diceRace.test.js
+  ex4-diceRace
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.race()`
+    ✓ should resolve as soon as a die settles successfully (10 ms)
+    ✓ should reject with an Error as soon as a die rolls off the table (30 ms)
+
+  ● ex4-diceRace › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.401 s
+Ran all test suites matching /ex4-diceRace.test.js/i.
+2022-10-05 12:05:24 info: ----------------------------------------
+2022-10-05 12:05:24 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-10-05 12:05:24 info: ----------------------------------------
+2022-10-05 12:05:25 info: All unit tests passed.
+2022-10-05 12:05:27 info: All steps were completed successfully

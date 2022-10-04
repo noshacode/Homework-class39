@@ -47,17 +47,17 @@ function renderLaureate(ul, { knownName, birth, death }) {
   }
 }
 
-function renderLaureates(array) {
+function renderLaureates(laureates) {
   const ul = createAndAppend('ul', document.body);
-  array.laureates.forEach((laureate) => renderLaureate(ul, laureate));
+  laureates.forEach((laureate) => renderLaureate(ul, laureate));
 }
 
 async function fetchAndRender() {
   try {
-    const laureates = await getData(
+    const response = await getData(
       'https://api.nobelprize.org/2.0/laureates?birthCountry=Netherlands&format=json&csvLang=en'
     );
-    renderLaureates(laureates);
+    renderLaureates(response.laureates);
   } catch (err) {
     console.error(`Something went wrong: ${err.message}`);
   }

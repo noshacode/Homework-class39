@@ -31,13 +31,11 @@ async function fetchData(url) {
   console.log('HTTP error', response.status);
 }
 
-async function fetchAndPopulatePokemons() {
+async function fetchAndPopulatePokemons(selectList) {
   const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
   console.log(data);
   const pokemonsList = data.results;
-  const selectList = document.createElement('select');
-  selectList.id = 'mySelect';
-  document.body.appendChild(selectList);
+
   for (let i = 0; i < pokemonsList.length; i++) {
     const option = document.createElement('option');
     option.value = pokemonsList[i].url;
@@ -46,23 +44,36 @@ async function fetchAndPopulatePokemons() {
   }
 }
 
-async function fetchImage(url) {
+async function fetchImage(url, imgBox) {
+  imgBox.textContent = '';
   const pokemon = await fetchData(url);
   // when we have 'official(-)artwork' javascript cant understand that so we should convert to string
   const data = pokemon.sprites.other['official-artwork'].front_default;
 
   const img = document.createElement('img');
   img.src = data;
-  document.body.appendChild(img);
+  imgBox.appendChild(img);
 }
 
 async function main() {
   try {
-    await fetchAndPopulatePokemons();
-    const selector = document.getElementById('mySelect');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = 'Get Pokemons!';
+    document.body.appendChild(button);
 
-    selector.addEventListener('change', async () => {
-      await fetchImage(selector.value);
+    const selectList = document.createElement('select');
+    document.body.appendChild(selectList);
+
+    const imgBox = document.createElement('div');
+    document.body.appendChild(imgBox);
+
+    button.addEventListener('click', async () => {
+      await fetchAndPopulatePokemons(selectList);
+    });
+
+    selectList.addEventListener('change', async () => {
+      await fetchImage(selectList.value, imgBox);
     });
   } catch (error) {
     console.log(error);
